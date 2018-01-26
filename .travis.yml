@@ -16,8 +16,8 @@ services:
   - docker
 
 before_install:
-- docker build -t dtulyakov/zabbix-server-mysql-alpine:latest .
-- docker run -d dtulyakov/zabbix-server-mysql-alpine:latest
+- docker build -t dtulyakov/zabbix-server-pgsql-alpine:latest .
+- docker run -d dtulyakov/zabbix-server-pgsql-alpine:latest
 - docker ps -a
 
 script:
