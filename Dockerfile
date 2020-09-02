@@ -4,8 +4,12 @@ LABEL \
   org.label-schema.schema-version="5" \
   org.label-schema.vendor="dtulyakov"
 
+user root
 
-RUN apk update \
+RUN set -x \
+    && apk update \
     && apk add -q --clean-protected --no-cache \
             curl \
     && rm -rf /var/cache/apk/*
+
+user zabbix
